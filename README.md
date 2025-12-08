@@ -1,10 +1,10 @@
-# Transitioning to KX: Exploring a Series of Use Cases
+# Transitioning to KDB-X: Exploring a Series of Use Cases
 
-While migrating tick data to kdb+, one of the more straightforward aspects is handling raw trade and quote
+While migrating tick data to KDB-X, one of the more straightforward aspects is handling raw trade and quote
 data. This is because such data can often be re-sourced from market data providers. Therefore, the main focus during
 migration lies in rethinking the architecture of the data analytics platform itself.
 
-By shifting to the kdb+ times series database, teams can take full advantage of its performance and expressiveness,
+By shifting to the KDB-X times series database, teams can take full advantage of its performance and expressiveness,
 among other powerful features. This transition also enables seamless integration with existing Python-based analytics
 platforms through PyKX, resulting in a more flexible and scalable architecture.
 
@@ -14,7 +14,7 @@ Python version: `3.12.3`
 
 Clone repository: `git clone https://github.com/fabiogaiera/transitioning-to-kx-products.git`
 
-Change Directory: `cd transtioning-to-kx`  
+Change Directory: `cd transtioning-to-kdb-x`  
 
 Create Virtual Environment: `python -m venv .venv`  
 
