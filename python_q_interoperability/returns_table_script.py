@@ -1,7 +1,7 @@
 import os
 
-from historical_database.historical_database_creator import run_query
-from historical_database.returns_table_creator import create_table_returns
+from trades_historical_database.returns_table_creator import create_table_returns
+from trades_historical_database.trades_historical_database_creator import run_query
 
 user = os.getlogin()
 db_path = f"/home/{user}/DB"
