@@ -12,7 +12,7 @@ platforms through PyKX, resulting in a more flexible and scalable architecture.
 
 Python version: `3.12.3`
 
-Clone repository: `git clone https://github.com/fabiogaiera/transitioning-to-kx-products.git`
+Clone repository: `git clone https://github.com/fabiogaiera/transitioning-to-kdb-x.git`
 
 Change Directory: `cd transtioning-to-kdb-x`  
 
