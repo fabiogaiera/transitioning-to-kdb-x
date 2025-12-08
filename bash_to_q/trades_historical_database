@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Permissions: Make sure that chmod +x script has been executed
+# Usage: ./script
+
+set -e
+
+DATA_DIR="$HOME/CSVs/AAPL/trades"
+
+DB_DIR="$HOME/DB"
+
+cd ..
+
+cd q_scripts
+
+q trades_historical_database_creator.q "$DATA_DIR" "$DB_DIR"

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Permissions: Make sure that chmod +x script has been executed
+# Usage: ./script
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+echo "Current directory is: $SCRIPT_DIR"
+
+cd "$SCRIPT_DIR/.." || { echo "Failed to move up one directory"; exit 1; }
+
+source .venv/bin/activate || { echo "Failed to activate virtual environment"; exit 1; }
+
+TRADES_DATA_DIR="$HOME/CSVs/AAPL/trades"
+TRADES_TABLE_NAME="trades"
+QUOTES_DATA_DIR="$HOME/CSVs/AAPL/quotes"
+QUOTES_TABLE_NAME="quotes"
+DATABASE_DIR="$HOME/DB"
+
+python -m tick_architecture.hdb.hdb_script "$TRADES_DATA_DIR" "$TRADES_TABLE_NAME" "$QUOTES_DATA_DIR" "$QUOTES_TABLE_NAME" "$DATABASE_DIR"
+
+echo "Script executed successfully."
+
+exit 0

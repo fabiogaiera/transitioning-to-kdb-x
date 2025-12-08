@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Permissions: Make sure that chmod +x script has been executed
+# Usage: ./script
+
+set -e
+
+TRADES_DIR="$HOME/CSVs/IBM/trades/2025.06_IBM_trades.csv"
+
+cd ..
+
+cd q_scripts
+
+q volumes_dataset_creator.q \
+  -param1 "$TRADES_DIR" \
+  -param2 2025.06.06D13:30:00.000000000 \
+  -param3 2025.06.06D20:00:00.000000000
+
+# sudo lsof -i :5000 List process using that specific port.
