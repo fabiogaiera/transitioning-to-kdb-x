@@ -1,4 +1,3 @@
-import pykx as kx
+from tick_architecture.real_time_processor import rtp
 
-with kx.SyncQConnection(port=5014, no_ctx=True) as q:
-    print(q('count trades'))
+print(rtp('select_query', 'trades', 'AAPL'))
