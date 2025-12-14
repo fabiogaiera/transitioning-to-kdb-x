@@ -13,9 +13,7 @@ def fetch_last_trade(symbol: str):
     trade = return_latest_trade_or_quote(TRADES, symbol)
     print(trade.text)
 
-    return [kx.TimespanAtom('now'),
-            kx.SymbolAtom(symbol),
-            kx.FloatAtom(1.0),
+    return [kx.TimespanAtom('now'), kx.SymbolAtom(symbol), kx.FloatAtom(1.0),
             kx.LongAtom(1)]
 
 
