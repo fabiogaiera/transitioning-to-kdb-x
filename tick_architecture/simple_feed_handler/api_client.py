@@ -1,3 +1,4 @@
+import json
 import os
 
 import requests
@@ -13,4 +14,6 @@ headers = {
 
 def return_latest_trade_or_quote(trade_quote, symbol):
     url = f"https://data.alpaca.markets/v2/stocks/{trade_quote}/latest?symbols={symbol}"
-    return requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers)
+    response_deserialized = json.loads(response.text)
+    return response_deserialized[trade_quote][symbol]

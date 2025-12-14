@@ -5,16 +5,24 @@ import pykx as kx
 
 from tick_architecture.simple_feed_handler.api_client import return_latest_trade_or_quote
 from tick_architecture.simple_feed_handler.tickerplant_publisher import publish_to_tickerplant
+from tick_architecture.simple_feed_handler.utils import convert_to_time_span
 
 QUOTES = 'quotes'
 
 
 def fetch_last_quote(symbol: str):
-    quote = return_latest_trade_or_quote(QUOTES, symbol)
-    print(quote.text)
-
-    return [kx.TimespanAtom('now'), kx.SymbolAtom(symbol), kx.FloatAtom(1.0), kx.LongAtom(1), kx.FloatAtom(1.0),
-            kx.LongAtom(1)]
+    values = return_latest_trade_or_quote(QUOTES, symbol)
+    ask_price = values['ap']
+    ask_size = values['as']
+    bid_price = values['bp']
+    bid_size = values['bs']
+    time_span = convert_to_time_span(values['t'])
+    return [kx.q(time_span),
+            kx.SymbolAtom(symbol),
+            kx.FloatAtom(ask_price),
+            kx.LongAtom(ask_size),
+            kx.FloatAtom(bid_price),
+            kx.LongAtom(bid_size)]
 
 
 if __name__ == '__main__':
