@@ -10,11 +10,7 @@ headers = {
 
 }
 
-url_trades = "https://data.alpaca.markets/v2/stocks/trades/latest?symbols=AAPL"
-url_quotes = "https://data.alpaca.markets/v2/stocks/quotes/latest?symbols=AAPL"
 
-response1 = requests.get(url_trades, headers=headers)
-response2 = requests.get(url_quotes, headers=headers)
-
-print(response1.text)
-print(response2.text)
+def return_latest_trade_or_quote(trade_quote, symbol):
+    url = f"https://data.alpaca.markets/v2/stocks/{trade_quote}/latest?symbols={symbol}"
+    return requests.get(url, headers=headers)
