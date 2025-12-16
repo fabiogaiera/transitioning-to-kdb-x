@@ -21,8 +21,11 @@ basic = kx.tick.BASIC(
 chained_tp = kx.tick.TICK(port=5013, chained=True)
 
 # Requisites For Fedora Linux:
-
 # $ sudo dnf install python3-devel
+
+# Requisites For Ubuntu Linux:
+# $ sudo apt install libpython3.11-dev
+
 # source .venv/bin/activate
 # python -c "import pykx;pykx.install_into_QHOME()"
 
@@ -30,6 +33,8 @@ chained_tp = kx.tick.TICK(port=5013, chained=True)
 
 # Open a q session
 # \l pykx.q
+
+# Official documentation: https://code.kx.com/kdb-x/get_started/kdb-x-python-install.html
 
 if __name__ == '__main__':
     basic.start()
