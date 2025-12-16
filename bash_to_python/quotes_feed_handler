@@ -16,7 +16,7 @@ fi
 
 source .venv/bin/activate || { echo "Failed to activate virtual environment"; exit 1; }
 
-python -m tick_architecture.simple_feed_handler.quotes_feed_handler 'AAPL' || { echo "Python script failed"; exit 1; }
+python -m tick_architecture.single_symbol_feed_handler.quotes_feed_handler 'AAPL' || { echo "Python script failed"; exit 1; }
 
 
 echo "Script completed successfully."

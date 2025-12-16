@@ -4,9 +4,9 @@ import time
 
 import pykx as kx
 
-from tick_architecture.simple_feed_handler.api_client import return_latest_trade_or_quote
-from tick_architecture.simple_feed_handler.tickerplant_publisher import publish_to_tickerplant
-from tick_architecture.simple_feed_handler.utils import convert_to_time_span
+from tick_architecture.single_symbol_feed_handler.api_client import return_latest_trade_or_quote
+from tick_architecture.single_symbol_feed_handler.tickerplant_publisher import publish_to_tickerplant
+from tick_architecture.single_symbol_feed_handler.utils import convert_to_time_span
 
 logging.basicConfig(
     level=logging.INFO,
