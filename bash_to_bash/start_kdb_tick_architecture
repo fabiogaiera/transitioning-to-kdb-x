@@ -1,0 +1,5 @@
+#!/bin/bash
+
+../bash_to_python/tickerplant_rdb_hdb_starter
+
+../bash_to_python/subscriber_starter

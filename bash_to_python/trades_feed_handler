@@ -20,4 +20,3 @@ python -m tick_architecture.single_symbol_feed_handler.trades_feed_handler 'AAPL
 
 
 echo "Script completed successfully."
-exit 0

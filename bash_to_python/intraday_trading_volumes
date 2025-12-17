@@ -25,4 +25,3 @@ fi
 python -m intraday_trading_volumes.volumes_script "$DATA_DIR/2025.06_IBM_trades.csv" 2025-06-06 || { echo "Python script failed"; exit 1; }
 
 echo "Script completed successfully."
-exit 0

@@ -25,4 +25,3 @@ fi
 python -m candlestick_chart.candlestick_script "$DATA_DIR/trades/2025.06_IBM_trades.csv" || { echo "Python script failed"; exit 1; }
 
 echo "Script completed successfully."
-exit 0

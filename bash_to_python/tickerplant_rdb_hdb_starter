@@ -5,6 +5,10 @@
 
 set -e
 
+echo
+echo "****************************Started script tickerplant_rdb_hdb_starter****************************"
+
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DB_DIR="$HOME/DB"
 LOGS_DIR="$HOME/Logs"
@@ -20,5 +24,5 @@ source .venv/bin/activate || { echo "Failed to activate virtual environment"; ex
 
 python -m tick_architecture.tickerplant_rdb_hdb_starter "$DB_DIR" "$LOGS_DIR" || { echo "Python script failed"; exit 1; }
 
-echo "Script completed successfully."
-exit 0
+echo
+echo "****************************Ended script tickerplant_rdb_hdb_starter successfully****************************"
