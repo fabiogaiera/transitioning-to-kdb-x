@@ -22,5 +22,3 @@ DATABASE_DIR="$HOME/DB"
 python -m tick_architecture.hdb.hdb_script "$TRADES_DATA_DIR" "$TRADES_TABLE_NAME" "$QUOTES_DATA_DIR" "$QUOTES_TABLE_NAME" "$DATABASE_DIR"
 
 echo "Script executed successfully."
-
-exit 0

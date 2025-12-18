@@ -24,5 +24,3 @@ MARKET_CLOSE_TIMESPAN="20:00:00.000000000"
 python -m trades_historical_database.returns_table_script "$DATA_DIR" "$DATABASE_DIR" "$TABLE_NAME" "$START_DATE" "$END_DATE" "$MARKET_OPEN_TIMESPAN" "$MARKET_CLOSE_TIMESPAN"
 
 echo "Script executed successfully."
-
-exit 0

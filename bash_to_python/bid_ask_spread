@@ -28,4 +28,3 @@ fi
 python -m bid_ask_spread.bid_ask_spread_script "$DATA_DIR/trades/2025.06_IBM_trades.csv" "$DATA_DIR/quotes/2025.06_IBM_quotes.csv" || { echo "Python script failed"; exit 1; }
 
 echo "Script completed successfully."
-exit 0
