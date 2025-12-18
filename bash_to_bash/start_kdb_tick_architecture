@@ -1,5 +1,18 @@
 #!/bin/bash
 
-../bash_to_python/tickerplant_rdb_hdb_starter
+# Launch tickerplant
+gnome-terminal -- bash -c "../bash_to_python/tickerplant_rdb_hdb_starter; exec bash"
+sleep 15
 
-../bash_to_python/subscriber_starter
+# Launch subscriber
+gnome-terminal -- bash -c "../bash_to_python/subscriber_starter; exec bash"
+sleep 10
+
+# Launch trades feed handler
+gnome-terminal -- bash -c "../bash_to_python/trades_feed_handler; exec bash"
+
+# Launch quotes feed handler
+gnome-terminal -- bash -c "../bash_to_python/quotes_feed_handler; exec bash"
+
+# Launch real time processor
+gnome-terminal -- bash -c "../bash_to_python/real_time_processor; exec bash"
