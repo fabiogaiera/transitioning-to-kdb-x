@@ -1,3 +1,5 @@
-from tick_architecture.real_time_processor import rtp
+import pykx as kx
 
-print(rtp('select_query', 'trades', 'AAPL'))
+
+def custom_api(table, symbol):
+    return kx.q(f'select from {table} where sym = `{symbol}')
