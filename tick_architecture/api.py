@@ -1,5 +1,6 @@
 import pykx as kx
 
 
-def custom_api(table, symbol):
-    return kx.q(f'select from {table} where sym = `{symbol}')
+# Count ticks for a given table, symbol, start_time and end_time
+def count_ticks(table, symbol, start_time, end_time):
+    return kx.q(f'select count i from {table} where sym = `{symbol}')
