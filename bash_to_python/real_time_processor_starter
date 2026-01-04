@@ -6,7 +6,7 @@
 set -e
 
 echo
-echo "****************************Started script real_time_processor****************************"
+echo "****************************Started script real_time_processor_starter****************************"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -19,4 +19,4 @@ fi
 
 source .venv/bin/activate || { echo "Failed to activate virtual environment"; exit 1; }
 
-python -m tick_architecture.real_time_processor || { echo "Python script failed"; exit 1; }
+python -m tick_architecture.real_time_processor_starter || { echo "Python script failed"; exit 1; }
