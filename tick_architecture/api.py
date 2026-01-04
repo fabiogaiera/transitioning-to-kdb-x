@@ -1,3 +1,6 @@
-from tick_architecture.real_time_processor import rtp
+import pykx as kx
 
-print(rtp('select_query', 'trades', 'AAPL'))
+
+# Count ticks for a given table, symbol, start_time and end_time
+def count_ticks(table, symbol, start_time, end_time):
+    return kx.q(f'select count i from {table} where sym = `{symbol}')

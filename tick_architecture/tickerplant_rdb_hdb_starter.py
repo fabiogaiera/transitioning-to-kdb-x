@@ -2,6 +2,7 @@ import sys
 
 import pykx as kx
 
+from tick_architecture.api import count_ticks
 from tick_architecture.rdb_schema import quotes
 from tick_architecture.rdb_schema import trades
 
@@ -38,4 +39,5 @@ chained_tp = kx.tick.TICK(port=5013, chained=True)
 
 if __name__ == '__main__':
     basic.start()
+    basic.hdb.register_api('count_ticks', count_ticks)
     chained_tp.start({'tickerplant': 'localhost:5010'})
