@@ -15,7 +15,7 @@ print(db.tables)
 
 basic = kx.tick.BASIC(
     tables={'trades': trades, 'quotes': quotes},
-    ports={'tickerplant': 5010, 'rdb': 5012, 'hdb': 5011},
+    ports={'tickerplant': 5010, 'rdb': 5011, 'hdb': 5012},
     log_directory=logs_dir,
     database=db_dir)
 
