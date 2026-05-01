@@ -53,11 +53,6 @@ sudo dnf install python3-tkinter
 
 For kdb+ and PyKX installation, check [KX.com](https://kx.com)
 
-**Alpaca Trading API Documentation (Required in case you want to download market data)**
-
-Historical trades (single symbol): [Stock Trades](https://docs.alpaca.markets/reference/stocktradesingle-1)  
-Historical quotes (single symbol): [Stock Quotes](https://docs.alpaca.markets/reference/stockquotesingle-1)
-
 **KX Documentation**
 
 Database and Programming Language: [kdb+ and q](https://code.kx.com/q)
